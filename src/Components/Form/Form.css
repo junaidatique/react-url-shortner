@@ -1,0 +1,174 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #daddf5;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: 0 45%;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+}
+@media screen and (max-width: 767px) {
+  body {
+    background: #23253d;
+  }
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+
+.container {
+  max-width: 1336px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-wrap {
+  width: 100%;
+}
+
+header {
+  max-width: 500px;
+  margin: auto;
+}
+header h1 {
+  margin: 0;
+  color: #232323;
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: 700;
+}
+header h1 span {
+  color: #ccc;
+}
+header small {
+  color: #7e8099;
+  font-size: 14px;
+  text-align: right;
+  display: block;
+}
+
+main form {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
+}
+main form .error {
+  color: rgb(97, 26, 21);
+  background-color: rgb(253, 236, 234);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+main form fieldset {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  position: relative;
+  border-radius: 10px;
+}
+main form fieldset input[type="text"] {
+  color: #7e8099;
+  width: 100%;
+  border: none;
+  padding: 20px 160px 20px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 10px;
+}
+main form fieldset input[type="button"] {
+  background-position: 85% 50%;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  color: #232323;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0px;
+  margin: 0px;
+  padding: 20px;
+  outline: none;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.6s all;
+  cursor: pointer;
+}
+main form fieldset input[type="submit"]:hover {
+  background-position: 85% 50%;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  transition: 0.3s all;
+}
+
+main .hide-result #result {
+  opacity: 0;
+}
+
+main .display-result #result {
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+main #result {
+  display: block;
+  background: #1e1d32;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  text-shadow: 1px 1px 1px #000;
+  opacity: 0;
+  transition: 0.6s all;
+}
